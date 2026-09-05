@@ -23,6 +23,8 @@ class JsonApiError(BaseModel):
 
 
 class NoContentResponse(Response):
+    media_type = "application/json"
+
     def __init__(
         self,
         content: bytes = b"",
